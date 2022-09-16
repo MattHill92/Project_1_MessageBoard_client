@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/editPost.css">
+    <title>MessageBoard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">MessageBoard</h1>
+            <div class="searchbar_section">
+                <input type="text" class="search_input" id="search_bar">
+                <button id="search_button" style="background:none; border-style:none"><img src="Images/icons8-search.svg" alt="search"></button>
+            </div>
+            <div class="user_section">
+                <p>Logged in as <span id="displayed_username" style="font-weight:bold">Matt</span></p>
+                <a href="#" id="logout_link">logout</a>
+            </div>
+        </div>
+        <div class="post_section">
+           <div class="title_section"><span>Title:</span><input type="text" id="post_title"></div>
+           <div class="topic_section"><span>Topic:</span><input type="text" id="post_topic"></div>
+           <p>Body:</p>
+            <textarea id="post_body" rows="4" cols="50" style="resize:none"></textarea>
+            <div class="footer">
+                <button id="submit_button">submit</button>
+            </div>
+        </div>
+    </div>
+    <script src = "Javascript/editPost.js"></script>
+</body>
+</html>

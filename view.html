@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/view.css">
+    <title>MessageBoard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">MessageBoard</h1>
+            <div class="searchbar_section">
+                <input type="text" class="search_input" id="search_bar">
+                <button id="search_button" style="background:none; border-style:none"><img src="Images/icons8-search.svg" alt="search"></button>
+            </div>
+            <div class="user_section">
+                <p>Logged in as <span id="displayed_username" style="font-weight:bold">Matt</span></p>
+                <a href="#" id="logout_link">logout</a>
+            </div>
+        </div>
+        <div class="post_section">
+           <div class="post_info">
+                <h2 id="post_title">Post Title Here</h2>
+                <p>posted in <b id="post_topic">topic</b> on <span id="post_date">4/20/2020</span></p>
+           </div>
+           <p class="post_body" id="post_body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt lorem libero, eu aliquet erat commodo vel. Nullam eget felis non mauris dictum euismod nec a nibh. Quisque eros sem, lobortis ut odio non, volutpat faucibus metus. Maecenas sit amet erat purus. Cras sed sagittis ligula, eu tincidunt felis. Donec eget interdum quam, ut euismod est. Vestibulum ac enim dolor. Praesent sed finibus magna.
+           </p>
+           <div class="post_footer">
+                <p>By <b id="post_username">Username</b></p>
+                <p><span id="post_views">0</span> views</p>
+                <div class="post_buttons">
+                    <button class="edit_button" id="post_edit_button">edit</button>
+                    <button class="delete_button" id="post_delete_button">delete</button>
+                </div>
+           </div>
+        </div>
+        <div class="comment_section">
+            <h3>Comments</h3>
+            <div class="comment_list" id="comment_list">
+                <div class="comment" id="template_comment">
+                    <div class="comment_header">
+                        <p><b id="comment_username">Username</b> <span id="comment_date">4/20/2020</span></p>
+                        <button id="comment_delete_button" style="visibility:hidden">X</button>
+                    </div>
+                    <p id="comment_body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt lorem libero, eu aliquet erat commodo vel.</p>
+                </div>
+            </div>
+        </div>
+        <div class="comment_footer">
+            <p><b id="leave_comment_username">username</b>:</p>
+            <input type="text" id="leave_comment_input">
+            <button id="leave_comment_button">Leave Comment</button>
+        </div>
+    </div>
+    <script src = "Javascript/view.js"></script>
+</body>
+</html>

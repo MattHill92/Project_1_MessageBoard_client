@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    background: #ffebc1;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto";
+}
+
+#create_button {
+    background: #ffce64;
+    border-color:#bd9746a9;
+    font-weight:bold;
+    height: 3em;
+    width: 10em;
+    margin:0.2em;
+}
+
+.container {
+    width: 800px;
+    background: #fff0cf;
+    border-style:solid;
+    border-color: #91856b;
+    border-width: 2px; 
+    margin-top: 10vh;
+}
+
+.header {
+    height: 3em;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+.searchbar_section {
+    display:flex;
+    justify-content: space-evenly;
+    width: 350px;
+}
+.search_input{
+    width:300px;
+}
+
+
+.user_section {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-evenly;
+}
+.user_section p {
+    margin: 0;
+}
+
+
+.results {
+    background: #ffdd92;
+    height: 60vh;
+    overflow:auto;
+}
+
+
+.result {
+    display:flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    border-style:dashed;
+    border-width:1px;
+    border-color: #91856b88;
+}
+
+.result div {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+.result div a{
+    font-size: 1.3em;
+    font-weight:bold;
+    margin: 0px 20px;
+    text-decoration: none;
+    color:black;
+}
+.result div p{
+    margin: 0px 20px;
+}

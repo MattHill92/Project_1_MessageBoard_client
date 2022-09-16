@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/search.css">
+    <title>MessageBoard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">MessageBoard</h1>
+            <div class="searchbar_section">
+                <input type="text" class="search_input" id="search_bar">
+                <button id="search_button" style="background:none; border-style:none"><img src="Images/icons8-search.svg" alt="search"></button>
+            </div>
+            <div class="user_section">
+                <p>Logged in as <span id="displayed_username" style="font-weight:bold">Matt</span></p>
+                <a href="#" id="logout_link">logout</a>
+            </div>
+        </div>
+        <div class="results" id="results">
+            <div class="result" id="result">
+                <div>
+                    <a href="#" id="title">title of post is this</a>
+                    <p id="date">4/20/2022</p>
+                </div>
+                <div>
+                    <p>posted in <b><span id="topic">_____</span></b> by user <b><span id="username">_____</span></b></p>
+                    <p><span id="views">0</span> views</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="create_button">Create Post</button>
+    <script src = "Javascript/search.js"></script>
+</body>
+</html>

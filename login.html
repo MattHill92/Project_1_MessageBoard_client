@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/login.css">
+    <title>MessageBoard</title>
+</head>
+<body>
+    <div class="centered_container">
+        <h1>Wecome to MessageBoard</h1>
+        <div class="input_field">
+            <label for="username_input">Username:</label>
+            <input type="text" id="username_input" name="username">
+        </div>
+        <div class="input_field">
+            <label for="password_input">Password:</label>
+            <input type="password" id="password_input" name="password">
+        </div>
+        <div class="input_field hide" id="confirm">
+            <label for="confirm_input">Confirm:</label>
+            <input type="password" id="confirm_input" name="confirm">
+        </div>
+        <button class="login_button" id="login">Login</button>
+        <button class="login_button hide" id="register">Register</button>
+        <a href="#" class="register_link" id="new_account">new account</a>
+        <a href="#" class="register_link hide" id="back">back</a>
+    </div>
+
+    <p id="message" class="invisible" style="color:red">text text text</p>
+
+
+    <script src = "Javascript/login.js"></script>
+</body>
+</html>

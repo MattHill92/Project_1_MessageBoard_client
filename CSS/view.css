@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    background: #ffebc1;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto";
+}
+
+button {
+    background: #ffce64;
+    border-color:#bd9746a9;
+    font-weight:bold;
+    margin:0.2em;
+}
+
+.container {
+    width: 800px;
+    background: #fff0cf;
+    border-style:solid;
+    border-color: #91856b;
+    border-width: 2px; 
+    margin-top: 10vh;
+}
+
+.header {
+    height: 3em;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+.searchbar_section {
+    display:flex;
+    justify-content: space-evenly;
+    width: 350px;
+}
+.search_input{
+    width:300px;
+}
+
+
+.user_section {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-evenly;
+}
+.user_section p {
+    margin: 0;
+}
+
+
+.post_section {
+    background: #ffdd92;
+    border-style:dashed;
+    border-width:1px;
+    border-color: #91856b88;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.post_info{
+    padding: 1em 1em;
+}
+.post_info *{
+    margin: 0;
+}
+.post_body {
+    padding: 0em 5em 4em 5em;
+}
+
+.post_footer{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.post_footer p{
+    margin: 0em;
+}
+
+.comment_section{
+    border-style: solid;
+    border-color:#fff0cf;;
+    border-width: 0.5em;
+    padding:0em 1em 0em 1em;
+    height:35vh;
+    overflow:auto;
+}
+.comment_section *{
+    margin: 0em;
+}
+
+.comment_list {
+    margin: 1em 3em 0em 3em;
+    padding: 1em;
+    background-color: #ffe8b6;
+}
+
+.comment {
+    border-style: solid;
+    border-color: black;
+    padding: 0.5em;
+    background: #ffdd92;
+    margin-bottom: 0.5em;
+}
+.comment_header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.comment_footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.5em;
+}
+.comment_footer *{
+    margin: 0;
+}
+.comment_footer input{
+    margin-left: 0.5em;
+    width: 380px;
+}
+
