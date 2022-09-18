@@ -31,7 +31,7 @@ function navigateToLoginPage(){
 }
 
 function getUsername(){
-  fetch("http://127.0.0.1:7070/user", {
+  fetch("http://20.168.105.126:7070/user", {
     headers: {
       'token':getCookie("token")
     }
@@ -61,16 +61,16 @@ function getCookie(name) {
 }
 
 async function fetchPosts(){
-  let path = "http://127.0.0.1:7070/search/recent";
+  let path = "http://20.168.105.126:7070/search/recent";
 
   if (param_map.get("search") == undefined || param_map.get("search") == "recent"){
-    path = "http://127.0.0.1:7070/search/recent"
+    path = "http://20.168.105.126:7070/search/recent"
   }else if (param_map.get("type") == "title"){
-    path = "http://127.0.0.1:7070/search/title/"+param_map.get("search");
+    path = "http://20.168.105.126:7070/search/title/"+param_map.get("search");
   }else if (param_map.get("search") == "myposts"){
-    path = "http://127.0.0.1:7070/search/user/"+user.id;
+    path = "http://20.168.105.126:7070/search/user/"+user.id;
   }else {
-    path = "http://127.0.0.1:7070/search/topic/"+param_map.get("search");
+    path = "http://20.168.105.126:7070/search/topic/"+param_map.get("search");
   }
 
   let response = await fetch(path).then(response => response.json()).then(response => {return response});

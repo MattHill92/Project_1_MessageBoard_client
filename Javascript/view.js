@@ -55,7 +55,7 @@ function searchPosts(){
 }
 
 function getUsername(){
-    fetch("http://127.0.0.1:7070/user", {
+    fetch("http://20.168.105.126:7070/user", {
       headers: {
         'token':getCookie("token")
       }
@@ -89,13 +89,13 @@ function navigateToLoginPage(){
 }
 
 async function fetchPost(){
-    let path = "http://127.0.0.1:7070/post/"+param_map.get("id");
+    let path = "http://20.168.105.126:7070/post/"+param_map.get("id");
     console.log(param_map);
     let r = await fetch(path).then(response => response.json()).then(response => {return response});
     buildPost(r.title, r.topic, r.body, r.date, r.view_count, r.username)
 }
 async function fetchComments(){
-    let path = "http://127.0.0.1:7070/comments/"+param_map.get("id");
+    let path = "http://20.168.105.126:7070/comments/"+param_map.get("id");
   
     let response = await fetch(path).then(response => response.json()).then(response => {return response});
     for (const r of response){
@@ -106,7 +106,7 @@ async function fetchComments(){
 
 
 async function deleteComment(id){
-    fetch("http://127.0.0.1:7070/comment/"+id, {
+    fetch("http://20.168.105.126:7070/comment/"+id, {
         method:'DELETE',
         mode:'cors',
         credentials: 'include',
@@ -119,7 +119,7 @@ async function deleteComment(id){
 }
 
 async function deletePost(){
-    fetch("http://127.0.0.1:7070/post/"+param_map.get("id"), {
+    fetch("http://20.168.105.126:7070/post/"+param_map.get("id"), {
         method:'DELETE',
         mode:'cors',
         credentials: 'include',
@@ -137,6 +137,7 @@ function editPost(){
 
 async function postComment(){
     if(leave_comment_input.value != ""){
+      
         let inputComment = {
             id:-1,
             postId: param_map.get("id"),
@@ -144,8 +145,9 @@ async function postComment(){
             username:user.username,
             date: 1662361200000,
         }
+
         console.log("button clicked");
-        fetch("http://127.0.0.1:7070/comment", {
+        fetch("http://20.168.105.126:7070/comment", {
             method:'POST',
             mode:'cors',
             credentials: 'include',
@@ -198,6 +200,8 @@ function getParamMap(params){
     })
     return map;
 }
+
+
 function getCookie(name) {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);

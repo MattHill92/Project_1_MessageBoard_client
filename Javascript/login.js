@@ -49,7 +49,7 @@ async function attemptLogin(){
         salt:"*****"
     }
     console.log("button clicked");
-    fetch("http://127.0.0.1:7070/login", {
+    fetch("http://20.168.105.126:7070/login", {
         method:'POST',
         mode:'cors',
         credentials: 'include',
@@ -84,7 +84,7 @@ async function attemptRegister(){
         salt:"*****"
     }
     console.log("button clicked");
-    fetch("http://127.0.0.1:7070/register", {
+    fetch("http://20.168.105.126:7070/register", {
         method:'POST',
         mode:'cors',
         credentials: 'include',
@@ -126,7 +126,12 @@ function getCookie(name) {
 
 function returnToPage(){
     if (param_map.get("from") == "search"){
-        window.location = "index.html";
+        let target = "index.html?from=search";
+        if (param_map.get("type") != undefined)
+            target = target+"&type="+param_map.get("type");
+        if (param_map.get("search") != undefined)
+            target = target+"&search="+param_map.get("search");
+        window.location = target;
     }
     else if (param_map.get("from") == "view"){
         window.location = "view.html?id="+ param_map.get("id");

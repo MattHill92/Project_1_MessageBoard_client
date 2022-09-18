@@ -52,7 +52,7 @@ function submitPost(){
     }
     if (param_map.get("id") != undefined){
         console.log("button clicked");
-        fetch("http://127.0.0.1:7070/post/"+param_map.get("id"), {
+        fetch("http://20.168.105.126:7070/post/"+param_map.get("id"), {
             method:'PUT',
             mode:'cors',
             credentials: 'include',
@@ -64,7 +64,7 @@ function submitPost(){
         }).then(window.location = "view.html?id="+param_map.get("id"))
     }else{
         console.log("button clicked");
-        fetch("http://127.0.0.1:7070/post", {
+        fetch("http://20.168.105.126:7070/post", {
             method:'POST',
             mode:'cors',
             credentials: 'include',
@@ -74,7 +74,7 @@ function submitPost(){
             },
             body:JSON.stringify(inputPost)
         }).then(() => {
-            fetch("http://127.0.0.1:7070/search/user/"+user.id).then(response => response.json()).then(response => window.location = "view.html?id="+response[0].post_id);
+            fetch("http://20.168.105.126:7070/search/user/"+user.id).then(response => response.json()).then(response => window.location = "view.html?id="+response[0].post_id);
         })
     }
 }
@@ -82,7 +82,7 @@ function submitPost(){
 
 
 function getUsername(){
-    fetch("http://127.0.0.1:7070/user", {
+    fetch("http://20.168.105.126:7070/user", {
       headers: {
         'token':getCookie("token")
       }
